@@ -36,8 +36,8 @@ test:
   imports:
     - whitebox_tools
   commands:
-    - whitebox_tools --help # [not win]
-    - whitebox_tools.exe --help # [win]
+    - whitebox_tools --help  # [not win]
+    - whitebox_tools.exe --help  # [win]
 
 about:
   home: https://github.com/jblindsay/whitebox-tools
