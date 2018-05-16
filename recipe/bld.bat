@@ -1,8 +1,8 @@
-copy whitebox_tools.exe "%LIBRARY_BIN%"
+copy "%RECIPE_DIR%\setup.py" "%SRC_DIR%\"
+copy "%SRC_DIR%\WBT\*"  "%SRC_DIR%\"
+copy "%SRC_DIR%\whitebox_tools.exe" "%LIBRARY_BIN%"
 
-copy %RECIPE_DIR%\setup.py %SRC_DIR%\WBT\
-copy %SRC_DIR%\WBT\LICENSE.txt .
-cd %SRC_DIR%\WBT
+cd %SRC_DIR%
 
 $PYTHON setup.py install --single-version-externally-managed --record=record.txt
 
