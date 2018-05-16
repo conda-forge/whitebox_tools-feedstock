@@ -17,9 +17,12 @@ source:
   fn: WhiteboxTools_win_amd64.zip  # [win]
   url: http://www.uoguelph.ca/~hydrogeo/WhiteboxTools/WhiteboxTools_win_amd64.zip  # [win]
   sha256: "4e0b6749b49ede34b5065289f19ce85adccac1ed00c1895f6ad988ae7468ee0b"  # [win]
+  patches:
+    - wbt.patch
 
 build:
   number: 0
+  skip: True  # [py2k]
 
 requirements:
   build:
