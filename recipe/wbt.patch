@@ -1,7 +1,7 @@
-diff --git a/WBT/wb_runner.py b/WBT/wb_runner.py
+diff --git a/wb_runner.py b/wb_runner.py
 index a5ba82b..e707dc8 100644
---- a/WBT/wb_runner.py
-+++ b/WBT/wb_runner.py
+--- a/wb_runner.py
++++ b/wb_runner.py
 @@ -25,7 +25,7 @@ from tkinter.scrolledtext import ScrolledText
  from tkinter import filedialog
  from tkinter import messagebox
@@ -30,10 +30,10 @@ index a5ba82b..e707dc8 100644
          if selected_item == -1:
              selected_item = 0
              self.tool_name = list[0]
-diff --git a/WBT/whitebox_tools.py b/whitebox_tools.py
+diff --git a/whitebox_tools.py b/whitebox_tools.py
 index 7694221..f878fd5 100644
---- a/WBT/whitebox_tools.py
-+++ b/WBT/whitebox_tools.py
+--- a/whitebox_tools.py
++++ b/whitebox_tools.py
 @@ -13,7 +13,9 @@ from __future__ import print_function
  import os
  from os import path
