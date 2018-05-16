@@ -1,6 +1,6 @@
 {% set repo_name = "whitebox-tools" %}
 {% set name = "whitebox_tools" %}
-{% set version = "0.7" %}
+{% set version = "0.7" %} # version number is also hardcoded in setup.py
 {% set sha256 = "1a5b80b6f0fffaae67aa8d22e0c8696f4d8368365a0962d5436395e93eb7bb80" %}
 
 package:
@@ -17,11 +17,6 @@ source:
   fn: WhiteboxTools_win_amd64.zip  # [win]
   url: http://www.uoguelph.ca/~hydrogeo/WhiteboxTools/WhiteboxTools_win_amd64.zip  # [win]
   sha256: "4e0b6749b49ede34b5065289f19ce85adccac1ed00c1895f6ad988ae7468ee0b"  # [win]
-
-  #path: {{ name }}
-  #fn: {{ name|lower }}-{{ version }}.tar.gz
-  #url: https://github.com/ContinuumIO/{{ repo_name }}/archive/v{{ version }}.tar.gz
-  #sha256: {{ sha256 }}
 
 build:
   number: 0
