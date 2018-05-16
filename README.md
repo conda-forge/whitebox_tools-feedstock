@@ -1,27 +1,44 @@
 About whitebox_tools
 ====================
 
-Home: http://github.com/ContinuumIO/whitebox-geospatial-analysis-tools/tree/v0.1.1/whitebox_tools
+Home: https://github.com/jblindsay/whitebox-tools
 
 Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
-Summary: A source of plugin tools for _Whitebox GAT_, an open-source GIS and remote sensing package.
+Summary: Whitebox Tools is a collection of advanced geospatial data analysis tools.
 
+WhiteboxTools is an advanced geospatial data analysis platform developed by Prof. John Lindsay at
+the University of Guelph's Geomorphometry and Hydrogeomatics Research Group. WhiteboxTools can be
+used to perform common geographical information systems (GIS) analysis operations, such as
+cost-distance analysis, distance buffering, and raster reclassification. Remote sensing and image
+processing tasks include image enhancement (e.g. panchromatic sharpening, contrast adjustments),
+image mosaicing, numerous filtering operations, simple classification (k-means), and common image
+transformations. WhiteboxTools also contains advanced tooling for spatial hydrological analysis
+(e.g. flow-accumulation, watershed delineation, stream network analysis, sink removal), terrain
+analysis (e.g. common terrain indices such as slope, curvatures, wetness index, hillshading;
+hypsometric analysis; multi-scale topographic position analysis), and LiDAR data processing. LiDAR
+point clouds can be interrogated (LidarInfo, LidarHistogram), segmented, tiled and joined,
+analyized for outliers, interpolated to rasters (DEMs, intensity images), and ground-points can be
+classified or filtered. WhiteboxTools is not a cartographic or spatial data visualization package;
+instead it is meant to serve as an analytical backend for other data visualization software,
+mainly GIS.
 
 
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/whitebox_tools-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/whitebox_tools-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/whitebox_tools-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/whitebox_tools-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/whitebox_tools-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/whitebox_tools-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/whitebox_tools-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/whitebox_tools-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/whitebox_tools-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/whitebox-tools-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/whitebox_tools/badges/version.svg)](https://anaconda.org/conda-forge/whitebox_tools)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/whitebox_tools/badges/downloads.svg)](https://anaconda.org/conda-forge/whitebox_tools)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-whitebox_tools-green.svg)](https://anaconda.org/conda-forge/whitebox_tools) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/whitebox_tools.svg)](https://anaconda.org/conda-forge/whitebox_tools) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/whitebox_tools.svg)](https://anaconda.org/conda-forge/whitebox_tools) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/whitebox_tools.svg)](https://anaconda.org/conda-forge/whitebox_tools) |
 
 Installing whitebox_tools
 =========================
