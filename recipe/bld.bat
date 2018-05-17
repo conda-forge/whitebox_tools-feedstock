@@ -1,3 +1,5 @@
+cargo build --release
+
 copy "%RECIPE_DIR%\setup.py" .
 copy "target\release\whitebox_tools.exe" "%LIBRARY_BIN%"
 
