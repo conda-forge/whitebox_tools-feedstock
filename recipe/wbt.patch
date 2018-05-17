@@ -1,5 +1,5 @@
 diff --git a/wb_runner.py b/wb_runner.py
-index a5ba82b..e707dc8 100644
+index a5ba82b..415efb1 100644
 --- a/wb_runner.py
 +++ b/wb_runner.py
 @@ -25,7 +25,7 @@ from tkinter.scrolledtext import ScrolledText
@@ -11,7 +11,31 @@ index a5ba82b..e707dc8 100644
  
  wbt = WhiteboxTools()
  
-@@ -1032,13 +1032,12 @@ class WbRunner(tk.Frame):
+@@ -664,23 +664,6 @@ class DataInput(tk.Frame):
+ 
+ class WbRunner(tk.Frame):
+     def __init__(self, tool_name=None, master=None):
+-        # First, try to find the WhiteboxTools exe directory
+-        if _platform == 'win32':
+-            ext = '.exe'
+-        else:
+-            ext = ''
+-
+-        exe_name = "whitebox_tools{}".format(ext)
+-
+-        self.exe_path = path.dirname(path.abspath(__file__))
+-        os.chdir(self.exe_path)
+-        for filename in glob.iglob('**/*', recursive=True):
+-            if filename.endswith(exe_name):
+-                self.exe_path = path.dirname(path.abspath(filename))
+-                break
+-
+-        wbt.set_whitebox_dir(self.exe_path)
+-
+         ttk.Frame.__init__(self, master)
+         self.script_dir = os.path.dirname(os.path.realpath(__file__))
+         self.grid()
+@@ -1032,13 +1015,12 @@ class WbRunner(tk.Frame):
      def get_tools_list(self):
          list = []
          selected_item = -1
