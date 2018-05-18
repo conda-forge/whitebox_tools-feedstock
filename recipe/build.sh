@@ -1,15 +1,8 @@
-#!/bin/bash
-if [ `uname` == Linux ]; then
-    export SSL_CERT_FILE="$CONDA_PREFIX/ssl/cacert.pem"
-fi
+cargo build --release
 
-cd whitebox_tools
-$PYTHON build.py
-export WHITEBOX_TOOLS_SHARE=$CONDA_PREFIX/share/whitebox_tools
-mkdir -p $WHITEBOX_TOOLS_SHARE
-cp -av target/release $WHITEBOX_TOOLS_SHARE
+mkdir -vp ${PREFIX}/bin;
+cp -v target/release/whitebox_tools ${PREFIX}/bin/ || exit 1;
+chmod -v 755 ${PREFIX}/bin/whitebox_tools || exit 1;
+
+cp $RECIPE_DIR/setup.py .
 $PYTHON setup.py install --single-version-externally-managed --record=record.txt
-
-# conda-build is finnicky about recursive cp commands
-mkdir -p $SP_DIR/whitebox_tools/data
-cp -av whitebox_tools/data/* $SP_DIR/whitebox_tools/data

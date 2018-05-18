@@ -1,45 +1,64 @@
-{% set repo_name = "whitebox-geospatial-analysis-tools" %}
+{% set repo = "whitebox-tools" %}
 {% set name = "whitebox_tools" %}
-{% set version = "0.1.1" %}
-{% set sha256 = "1a5b80b6f0fffaae67aa8d22e0c8696f4d8368365a0962d5436395e93eb7bb80" %}
+{% set version = "0.8.0dev" %}
+{% set tag = "f6d6ee328ecfd9292fd9d31b3379cd4800fc142d" %}
+{% set sha256 = "b4c25680993fb0d281df122cbf0dccc4582f9b8ba051314b0e9afe4bae0c89c6" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  path: {{ name }}
-  fn: {{ name|lower }}-{{ version }}.tar.gz
-  url: https://github.com/ContinuumIO/{{ repo_name }}/archive/v{{ version }}.tar.gz
+  git_url: https://github.com/jblindsay/whitebox-tools.git
+  git_tag: {{ tag }}
   sha256: {{ sha256 }}
+  patches:
+    - wbt.patch
 
 build:
   number: 0
-  skip: True  # [win or py2k]
+  skip: True  # [py2k]
 
 requirements:
   build:
     - python
     - setuptools
     - rust
-    - openssl
-    - toolchain
 
   run:
     - python
-    - rust
 
 test:
   imports:
     - whitebox_tools
+  commands:
+    - whitebox_tools --help  # [not win]
+    - whitebox_tools.exe --help  # [win]
 
 about:
-  home: http://github.com/ContinuumIO/{{ repo_name }}/tree/v{{ version }}/{{ name }}
+  home: https://github.com/jblindsay/whitebox-tools
   license: MIT
   license_family: MIT
-  license_file: {{ name }}/LICENSE.txt
-  summary: 'A source of plugin tools for _Whitebox GAT_, an open-source GIS and remote sensing package.'
+  license_file: LICENSE.txt
+  summary: 'Whitebox Tools is a collection of advanced geospatial data analysis tools.'
+  description: |
+    WhiteboxTools is an advanced geospatial data analysis platform developed by Prof. John Lindsay at 
+    the University of Guelph's Geomorphometry and Hydrogeomatics Research Group. WhiteboxTools can be 
+    used to perform common geographical information systems (GIS) analysis operations, such as 
+    cost-distance analysis, distance buffering, and raster reclassification. Remote sensing and image 
+    processing tasks include image enhancement (e.g. panchromatic sharpening, contrast adjustments), 
+    image mosaicing, numerous filtering operations, simple classification (k-means), and common image 
+    transformations. WhiteboxTools also contains advanced tooling for spatial hydrological analysis 
+    (e.g. flow-accumulation, watershed delineation, stream network analysis, sink removal), terrain 
+    analysis (e.g. common terrain indices such as slope, curvatures, wetness index, hillshading; 
+    hypsometric analysis; multi-scale topographic position analysis), and LiDAR data processing. LiDAR 
+    point clouds can be interrogated (LidarInfo, LidarHistogram), segmented, tiled and joined, 
+    analyized for outliers, interpolated to rasters (DEMs, intensity images), and ground-points can be 
+    classified or filtered. WhiteboxTools is not a cartographic or spatial data visualization package; 
+    instead it is meant to serve as an analytical backend for other data visualization software, 
+    mainly GIS.
 
 extra:
   recipe-maintainers:
-    - gbrener
+    - dharhas
+    - sdc50
