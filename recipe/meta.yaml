@@ -21,10 +21,12 @@ build:
 
 requirements:
   build:
+    - rust
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - python
     - setuptools
-    - rust
-
   run:
     - python
 
