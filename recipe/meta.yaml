@@ -1,7 +1,5 @@
-{% set repo = "whitebox-tools" %}
 {% set name = "whitebox_tools" %}
 {% set version = "2.0.0" %}
-{% set sha256 = "18705fc948bdb2f96cd816e5a72d36b9cc460aa8c910383d23fdbd61641aab60" %}
 
 package:
   name: {{ name|lower }}
@@ -9,18 +7,18 @@ package:
 
 source:
   url: https://github.com/jblindsay/whitebox-tools/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 18705fc948bdb2f96cd816e5a72d36b9cc460aa8c910383d23fdbd61641aab60
 
 build:
   number: 0
-  skip: True  # [py2k]
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('rust') }}
+  host:
     - python
-    - setuptools
-    - rust
-
+    - pip
   run:
     - python
 
