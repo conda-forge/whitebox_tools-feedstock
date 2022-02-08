@@ -1,9 +1,9 @@
 cargo build --release -v
 
 mkdir -vp ${PREFIX}/bin;
-ls -al target
+ls -al target/release
 echo "ls target"
-ls -al ./target/whitebox-tools-app/src
+ls -al ./target/release/whitebox-tools-app/src
 
 cp -v target/release/whitebox-tools-app ${PREFIX}/bin/ || exit 1;
 chmod -v 755 ${PREFIX}/bin/whitebox-tools-app || exit 1;
