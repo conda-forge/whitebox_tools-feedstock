@@ -1,11 +1,10 @@
 cargo build --release -v
 
 mkdir -vp ${PREFIX}/bin;
-ls -al target/release
-echo "ls target"
-ls -al ./target/release/whitebox-tools-app/src
+ls -al target/release/build/
+ls -al ./target/release/build/whitebox-tools-app/src
 
-cp -v target/release/whitebox-tools-app ${PREFIX}/bin/ || exit 1;
+cp -v target/release/build/whitebox-tools-app ${PREFIX}/bin/ || exit 1;
 chmod -v 755 ${PREFIX}/bin/whitebox-tools-app || exit 1;
 
 cp $RECIPE_DIR/setup.py .
