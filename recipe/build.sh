@@ -1,6 +1,7 @@
 cargo build --release -v
 
 mkdir -vp ${PREFIX}/bin;
+ls -al target/release/
 ls -al target/release/build/
 ls -al ./target/release/build/whitebox-tools-app/src
 
