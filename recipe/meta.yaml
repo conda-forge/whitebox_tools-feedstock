@@ -16,6 +16,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('rust') }}
+    - cargo-bundle-licenses
   host:
     - python
     - pip
@@ -36,7 +37,10 @@ about:
   home: https://github.com/jblindsay/whitebox-tools
   license: MIT
   license_family: MIT
-  license_file: LICENSE.txt
+  license_file:
+    - LICENSE.txt
+    - THIRDPARTY.yml
+
   summary: 'Whitebox Tools is a collection of advanced geospatial data analysis tools.'
   description: |
     WhiteboxTools is an advanced geospatial data analysis platform developed by Prof. John Lindsay at

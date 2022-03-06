@@ -1,4 +1,5 @@
 cargo build --release -v
+cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
 
 mkdir -vp ${PREFIX}/bin
 if [ ! -z "${CARGO_BUILD_TARGET}" ]; then
