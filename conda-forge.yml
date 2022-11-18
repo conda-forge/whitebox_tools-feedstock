@@ -9,3 +9,5 @@ provider:
 
 build_platform:
   osx_arm64: osx_64
+conda_build:
+  pkg_format: '2'
