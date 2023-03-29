@@ -1,5 +1,5 @@
-cargo build --release
-cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
+cargo build --release -p whitebox_tools
+cargo-bundle-licenses --format yaml --output THIRDPARTY.yml >nul
 
 copy "%RECIPE_DIR%\setup.py" .
 copy "target\release\whitebox_tools.exe" "%LIBRARY_BIN%"

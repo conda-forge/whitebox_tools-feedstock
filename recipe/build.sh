@@ -1,5 +1,8 @@
-cargo build --release -v
-cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
+cargo build --release -v -p whitebox_tools
+
+# ignore any fails on license bundling
+cargo-bundle-licenses --format yaml --output THIRDPARTY.yml || true
+cargo-bundle-licenses --format yaml --output THIRDPARTY.yml || true
 
 mkdir -vp ${PREFIX}/bin
 if [ ! -z "${CARGO_BUILD_TARGET}" ]; then

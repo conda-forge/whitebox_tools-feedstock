@@ -1,5 +1,5 @@
 {% set name = "whitebox_tools" %}
-{% set version = "2.2.0" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/jblindsay/whitebox-tools/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: b7715731e1519be71cf1d05d1d1f93c36d498c218da0a898bab95e16dd403a8e
+  sha256: 295698debe203b6b61092d267e8e57021bb61941422a5432cd830b3ba2cd5ee8
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
@@ -41,7 +41,6 @@ about:
   license_family: MIT
   license_file:
     - LICENSE.txt
-    - THIRDPARTY.yml
 
   summary: Whitebox Tools is a collection of advanced geospatial data analysis tools.
   description: |

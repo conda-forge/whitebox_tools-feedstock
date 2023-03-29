@@ -1,11 +1,11 @@
-About whitebox_tools
-====================
+About whitebox_tools-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/whitebox_tools-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/jblindsay/whitebox-tools
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/whitebox_tools-feedstock/blob/main/LICENSE.txt)
 
 Summary: Whitebox Tools is a collection of advanced geospatial data analysis tools.
 
