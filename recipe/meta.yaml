@@ -27,8 +27,9 @@ requirements:
   host:
     - python
     - pip
-    - freetype
-    - glib
+    - freetype  # [linux]
+    - fontconfig  # [linux]
+    - glib  # [linux]
   run:
     - python
 
