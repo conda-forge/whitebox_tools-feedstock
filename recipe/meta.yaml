@@ -14,22 +14,14 @@ build:
 
 requirements:
   build:
-    - {{ compiler("cxx") }}  # [linux]
     - {{ compiler('c') }}
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
     - python                                 # [build_platform != target_platform]
-    - glib  # [linux]
-    - pkg-config  # [linux]
-    - cmake
-    - make  # [unix]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
     - pip
-    - freetype  # [linux]
-    - fontconfig  # [linux]
-    - glib  # [linux]
   run:
     - python
 

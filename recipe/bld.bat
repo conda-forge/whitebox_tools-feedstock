@@ -1,4 +1,4 @@
-cargo build --release
+cargo build --release -p whitebox_tools
 cargo-bundle-licenses --format yaml --output THIRDPARTY.yml >nul
 
 copy "%RECIPE_DIR%\setup.py" .

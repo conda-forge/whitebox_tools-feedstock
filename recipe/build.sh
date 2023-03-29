@@ -1,4 +1,4 @@
-cargo build --release -v
+cargo build --release -v -p whitebox_tools
 
 # ignore any fails on license bundling
 cargo-bundle-licenses --format yaml --output THIRDPARTY.yml || true
