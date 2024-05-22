@@ -1,5 +1,5 @@
 {% set name = "whitebox_tools" %}
-{% set version = "2.3.0" %}
+{% set version = "2.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,15 @@ package:
 
 source:
   url: https://github.com/jblindsay/whitebox-tools/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 295698debe203b6b61092d267e8e57021bb61941422a5432cd830b3ba2cd5ee8
+  sha256: f99f47e3d362cd3a1e8ac3f1e060ad7d0426244520ebd968f3ef01870fc1a955
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
     - python                                 # [build_platform != target_platform]
