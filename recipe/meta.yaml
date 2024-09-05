@@ -10,7 +10,7 @@ source:
   sha256: f99f47e3d362cd3a1e8ac3f1e060ad7d0426244520ebd968f3ef01870fc1a955
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -23,6 +23,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
   run:
     - python
 
