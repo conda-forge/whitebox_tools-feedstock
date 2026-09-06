@@ -1,0 +1,12 @@
+diff --git a/Cargo.lock b/Cargo.lock
+index 0b1cd41..c2fda0e 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -3798,7 +3798,7 @@ name = "tsp-rs"
+ version = "0.1.0"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "02f971d0e820c6e73d2c71cf139e2cbe6962bdacb456efc4a78c2a41b4244426"
++checksum = "10377978d7730284fbdaaa6f6e375633b896137a38049ed34eb9a0b218bb6535"
+ dependencies = [
+  "rand 0.6.5",
+ ]

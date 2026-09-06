@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/jblindsay/whitebox-tools/archive/refs/tags/v{{ version }}.tar.gz
   sha256: f99f47e3d362cd3a1e8ac3f1e060ad7d0426244520ebd968f3ef01870fc1a955
+  patches:
+    - 0001-update-tsp-rs-checksum.patch
 
 build:
   number: 3
